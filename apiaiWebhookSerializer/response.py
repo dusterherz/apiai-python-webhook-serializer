@@ -21,7 +21,7 @@ class Response:
             response["followupEvent"] = self.followupEvent
         return response
 
-    def error(self, httpErrorCode, errorMsg):
+    def error(httpErrorCode, errorMsg):
         response = {
             "status": {
                 "code": httpErrorCode,
