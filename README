@@ -1,5 +1,7 @@
 # Apiai Python Webhook Serializer
 
+[![PyPI version](https://badge.fury.io/py/apiaiWebhookSerializer.svg)](https://badge.fury.io/py/apiaiWebhookSerializer)
+
 Convert Api.ai webhook requests and responses to a python object with a proper Serializer.
 
 ## What is APWS ? And Why ?
@@ -21,17 +23,16 @@ You can find all the fields that you can use [here](https://docs.api.ai/docs/que
 Reponse is here to create a python object that can be return like that for example with flask.
 Response take multiples informations for its creation. Three are mandatory : `speech`, `displayText` and `source`. Three others are optional : `data`, `contextOut` and `followupEvent`.
 You can find more details on this [here](https://docs.api.ai/docs/webhook#section-format-of-response-from-the-service)
-With Response you can also format it into JSON with the method `format()` if you are not using Flask.
-This class integrate also an error formater method for Api.ai (`error()`). This method takes two parameters : `httpErrorCode` (the http error code corresponding to the error), and `errorMsg` (the message of the error). Error is static so you can use it without initializing a Response object.
+With Response you can also format it into a dictionary with the method `format()` if you are not using Flask.
+This class integrate also an error formater method for Api.ai (`error`). This method takes two parameters : `httpErrorCode` (the http error code corresponding to the error), and `errorMsg` (the message of the error). `error` is static so you can use it without initializing a Response object.
 
 ## Examples ?
 
-WIP?
+WIP.
 
 ## Installation
 
-For the moment, you can clone the respository and install it with pip by using the command `pip install .` inside the folder.
-This will be soon added to pip repositories.
+You can install APWS via pip ; `pip install apiaiWebhookSerializer`
 
 ## License
 
