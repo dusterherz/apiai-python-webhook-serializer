@@ -1,6 +1,6 @@
 # Apiai Python Webhook Serializer
 
-[![PyPI version](https://badge.fury.io/py/apiaiWebhookSerializer.svg)](https://badge.fury.io/py/apiaiWebhookSerializer)
+[![PyPI version](https://badge.fury.io/py/apiaiWebhookSerializer.svg)](https://badge.fury.io/py/apiaiWebhookSerializer) [![Build Status](https://travis-ci.org/dusterherz/apiai-python-webhook-serializer.svg?branch=master)](https://travis-ci.org/dusterherz/apiai-python-webhook-serializer)
 
 Convert Api.ai webhook requests and responses to a python object with a proper Serializer.
 
