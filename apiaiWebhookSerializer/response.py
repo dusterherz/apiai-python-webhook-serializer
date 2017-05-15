@@ -1,3 +1,6 @@
+
+import json
+
 class Response:
     def __init__(self, speech, displayText, source, data={}, contextOut=[], followupEvent={}):
         self.speech = speech
@@ -19,7 +22,7 @@ class Response:
             response["contextOut"] = self.contextOut
         if self.followupEvent:
             response["followupEvent"] = self.followupEvent
-        return response
+        return json.dumps(response)
 
     def error(httpErrorCode, errorMsg):
         response = {
@@ -28,4 +31,4 @@ class Response:
                 "errorType": errorMsg
             }
         }
-        return response
+        return json.dumps(response)
