@@ -1,7 +1,9 @@
 
 import json
 
+
 class Response:
+
     def __init__(self, speech, displayText, source, data={}, contextOut=[], followupEvent={}):
         self.speech = speech
         self.displayText = displayText

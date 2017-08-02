@@ -1,5 +1,7 @@
 import unittest
+import json
 from apiaiWebhookSerializer import Response
+
 
 class TestReponse(unittest.TestCase):
     speech = "I love cupcake"
@@ -13,11 +15,12 @@ class TestReponse(unittest.TestCase):
         self.assertEqual(self.response.speech, self.speech)
         self.assertEqual(self.response.source, self.source)
         self.assertEqual(self.response.displayText, self.displayText)
-        self.assertNotEqual(self.response.source, "notTest")
+        self.assertNotEqual(self.response.source, 'notTest')
 
     def test_format(self):
         test = {"speech": self.speech, "displayText": self.displayText, "source": self.source}
-        self.assertEqual(self.response.format(), test)
+        self.assertEqual(self.response.format(), json.dumps(test))
+
 
 if __name__ == '__main__':
     unittest.main()
